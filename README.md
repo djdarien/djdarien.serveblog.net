@@ -36,6 +36,7 @@
 	</li>
 	<li>
 		<a href="https://djdarien.github.io/arcade1up-rpi-easy-setup/"> Arcade 1up Raspberry Pi setup </a>
+	</li>
 
 <p></p>
 <p></p>
@@ -49,7 +50,7 @@
 		<a href="https://www.twitch.tv/khaos_demon">My Twitch Channel</a>
 	   <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/Y4yHGoODrUo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	  -->
-	</li>
+	
 		</li>
 </ul>
 
