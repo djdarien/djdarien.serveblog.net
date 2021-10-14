@@ -28,7 +28,7 @@
 </ul>
 
 
-<p></p>
+
 <p></p>
 <p> Other Projects & Helpful How-to`s & More! </p>
 <ul>
