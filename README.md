@@ -29,6 +29,15 @@
 
 
 <p></p>
+<p</p>
+<p> Other Projects & Helpful How-to`s & More! </p>
+	<li>
+		<a href="https://djdarien.github.io/macpi/"> Mac OS 8.1 for Raspbery Pi</a>
+	</li>
+	<li>
+		<a href="https://djdarien.github.io/arcade1up-rpi-easy-setup/"> Arcade 1up Raspberry Pi setup </a>
+
+<p></p>
 <p></p>
 <p> Social Media Links </p>
 <ul>
@@ -41,12 +50,7 @@
 	   <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/Y4yHGoODrUo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	  -->
 	</li>
-	<li>
-		<a href="https://djdarien.github.io/macpi/"> Mac OS 8.1 for Raspbery Pi</a>
-	</li>
-	<li>
-		<a href="https://djdarien.github.io/arcade1up-rpi-easy-setup/"> Arcade 1up Raspberry Pi setup </a>
-	</li>
+		</li>
 </ul>
 
 
