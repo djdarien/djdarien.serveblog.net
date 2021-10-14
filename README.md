@@ -29,7 +29,7 @@
 
 
 <p></p>
-<p</p>
+<p></p>
 <p> Other Projects & Helpful How-to`s & More! </p>
 <ul>
 	<li>
@@ -39,7 +39,7 @@
 		<a href="https://djdarien.github.io/arcade1up-rpi-easy-setup/"> Arcade 1up Raspberry Pi setup </a>
 	</li>
 </ul>
-<p></p>
+
 <p></p>
 <p> Social Media Links </p>
 <ul>
