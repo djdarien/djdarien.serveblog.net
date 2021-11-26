@@ -20,10 +20,10 @@
 <p>Games I made:</p>
 <ul>
   <li>
-    <a href="http://djdarien.serveblog.net/adventures-of-ollie-the-ball-the-lost-coin-hunt.html">Adventures of Ollie the Ball the Lost Coin Hunt </a>
+    <a href="/adventures-of-ollie-the-ball-the-lost-coin-hunt.html">Adventures of Ollie the Ball the Lost Coin Hunt </a>
   </li>
   <li>
-    <a href="http://djdarien.serveblog.net/birdy-flap.html">Birdy Flap game</a>
+    <a href="/birdy-flap.html">Birdy Flap game</a>
   </li>
 </ul>
 
