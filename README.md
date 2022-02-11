@@ -13,7 +13,7 @@
 
 <p id="isPasted">Has been in the tech industry for over a decade, from Geek Squad agent to private computer repairman, and now currently is an IT Systems Administrator at a Fortune 500 company where he helps repair and deplay Windows laptops as well as manage a fleet of Apple Macbooks  via JAMF. &nbsp; Darien has been enjoying video games passionately from the arcade games of yester-year to later consoles like N64 and Xbox to all the latest PC games and recently now enjoys the virtual reality world on regular basis with his Rift S and Quest 2</p>
 <h2>Whats this site all about? </h2>
-<p> To show off , to share and enjoy all of my various projects: some are old programming projects of fun attempts, others using Raspberry Pi`s, home servers, from arcade cabinets , to vintage Apple Macintosh`s and more!&nbsp;</p>
+<p> To show off , to allow me to share to others and enjoy all of my various projects: some are old programming projects of fun attempts, others using Raspberry Pi`s, home servers, from arcade cabinets , to vintage Apple Macintosh`s and more!&nbsp;</p>
 <p>Enjoy !</p>
 <p><br></p>
 <p>Check my stuff out here:</p>
@@ -60,7 +60,7 @@
 	 <a href="https://www.twitch.tv/khaos_demon">My Twitch Channel</a>
 	  
 <p>
-<iframe src="https://player.twitch.tv/?channel=khaos_demon&parent="" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe> 
+<!----<iframe src="https://player.twitch.tv/?channel=khaos_demon&parent="" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe> 
 	
 	</li>
 
