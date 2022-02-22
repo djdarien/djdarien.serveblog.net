@@ -60,8 +60,7 @@
 	 <a href="https://www.twitch.tv/khaos_demon">My Twitch Channel</a>
 	  
 <p>
-<!----<iframe src="https://player.twitch.tv/?channel=khaos_demon&parent="" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe> 
-	
+
 	</li>
 
 
