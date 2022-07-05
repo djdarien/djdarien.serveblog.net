@@ -1,6 +1,6 @@
 <h1 style="text-align: center;">Hello and Welcome!&nbsp;</h1>
 
-<h1 style="text-align: center;">This site is temporary until a permemant one is built however please enjoy !</h1>
+<h1 style="text-align: center;">Temporary site -  a permemant one is built however please enjoy !</h1>
 
 <p><br></p>
 <p><br></p>
@@ -47,7 +47,9 @@
 		<a href="https://djdarien.github.io/arcade1up-rpi-easy-setup/"> Arcade 1up Raspberry Pi setup </a>
 	</li>
 </ul>
-
+<p></p>
+<iframe src="https://cache.gametracker.com/components/html0/?host=wolfetfl.ddns.net:27960&bgColor=373e28&fontColor=d2e1b5&titleBgColor=2e3225&titleColor=ffffff&borderColor=3e4433&linkColor=889c63&borderLinkColor=828e6b&showMap=1&currentPlayersHeight=100&showCurrPlayers=1&topPlayersHeight=100&showTopPlayers=1&showBlogs=1&width=440" frameborder="0" scrolling="no" width="440" height="660"></iframe>
+<p></p>
 <p></p>
 <h3> Social Media Links </h3>
 <ul>
