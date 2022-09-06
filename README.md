@@ -57,9 +57,9 @@
 	  </p>
 	<li>
 	 <a href="https://www.twitch.tv/khaos_demon">My Twitch Channel</a>
-	  
+	  </li>
+
 <p>
 
-	</li>
-
+	
 
