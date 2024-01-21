@@ -60,7 +60,7 @@
   </li>
  	 <a href="https://www.tiktok.com/@darien.entwistle"> TikTok </a> 
    
-	  </li>
+	  
 
 <p>
 
