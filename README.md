@@ -1,6 +1,6 @@
 <h1 style="text-align: center;">Hello and Welcome!&nbsp;</h1>
 
-<h1 style="text-align: center;">Temporary site - However please enjoy !</h1>
+<h1 style="text-align: center;">Darien Entwistle</h1>
 
 <p><br></p>
 <p><br></p>
@@ -11,7 +11,7 @@
 	<a href="https://netbytegames.s3.amazonaws.com/ollietheball/OllieTheBall_FinalAlpha054.zip" data-card-branding="0" class="embedly-card"></a>
 </div>
 
-<p id="isPasted">Has been in the tech industry for well over a decade, from Geek Squad agent to private computer repairman, and now currently is an IT Systems Administrator at a Fortune 500 company where he helps repair and deploy Windows laptops as well as manage a fleet of Apple Macbooks  via JAMF. &nbsp; Darien has been enjoying video games passionately from the arcade games of yester-year to later consoles like N64 and Xbox to all the latest PC games and recently now enjoys the virtual reality world on regular basis with his Rift S and Quest 2</p>
+<p id="isPasted">Has been in the tech industry for well over a decade, from Geek Squad agent to private computer repairman, and was  an IT Systems Administrator at a Fortune 500 company where he helps repair and deploy Windows laptops as well as manage a fleet of Apple Macbooks  via JAMF for over 7 years and now currently is a systems engineer. &nbsp; Darien has been enjoying video games passionately from the arcade games of yester-year to later consoles like N64 and Xbox to all the latest PC games and recently now enjoys the virtual reality world on regular basis with his Rift S and Quest 2</p>
 <h2>Whats this site all about? </h2>
 <p> To show off , to allow me to share to others and enjoy all of my various projects: some are old programming projects of fun attempts, others using Raspberry Pi`s, home servers, from arcade cabinets , to vintage Apple Macintosh`s and more!&nbsp;</p>
 <p>Enjoy !</p>
@@ -57,6 +57,9 @@
 	  </p>
 	<li>
 	 <a href="https://www.twitch.tv/khaos_demon">My Twitch Channel</a>
+  </li>
+ 	 <a href="https://www.tiktok.com/@darien.entwistle"> TikTok </a> 
+   
 	  </li>
 
 <p>
