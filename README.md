@@ -26,6 +26,9 @@
   <li>
     <a href="/birdy-flap.html">Birdy Flap game</a>
   </li>
+	<li>  
+	    <a href="/snake.html">snake game</a>
+	</li>
 </ul>
 
 
