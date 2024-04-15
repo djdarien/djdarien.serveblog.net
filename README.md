@@ -61,7 +61,9 @@
 	<li>
 	 <a href="https://www.twitch.tv/khaos_demon">My Twitch Channel</a>
   </li>
- 	 <a href="https://www.tiktok.com/@darien.entwistle"> TikTok </a> 
+ 	<li>
+		
+ <a href="https://www.tiktok.com/@darien.entwistle"> TikTok </a> </li> 
    
 	  
 
