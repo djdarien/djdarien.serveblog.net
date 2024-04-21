@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guestbook</title>
+  <style>
+    body {
+      background-image: url('https://hips.hearstapps.com/hmg-prod/images/michael-schumacher-of-germany-racing-for-ferrari-during-the-news-photo-1646420952.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+    nav {
+      background-color: #ff0000; /* Red color for navigation bar */
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+    }
+    nav a:hover {
+      background-color: #555;
+    }
+    .container {
+      max-width: 960px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    form {
+      background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background for form */
+      padding: 20px;
+      border-radius: 10px;
+    }
+    label, input, textarea {
+      display: block;
+      margin-bottom: 10px;
+    }
+    input[type="submit"] {
+      background-color: #ff0000;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="projects.html">Projects</a>
+    <a href="socialmedia.html">Social Media</a>
+        <a href="guestbook.html">guestbook</a>
+  </nav>
+  <div class="container">
+    <h1>Welcome to the Guestbook</h1>
+    <form onsubmit="return validateForm()" action="submit_guestbook.php" method="post">
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name"><br>
+      <label for="comment">Comment:</label><br>
+      <textarea id="comment" name="comment"></textarea><br>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</body>
+</html>
