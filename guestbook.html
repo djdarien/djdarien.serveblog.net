@@ -66,13 +66,83 @@
   </nav>
   <div class="container">
     <h1>Welcome to the Guestbook</h1>
-    <form onsubmit="return validateForm()" action="submit_guestbook.php" method="post">
-      <label for="name">Name:</label><br>
-      <input type="text" id="name" name="name"><br>
-      <label for="comment">Comment:</label><br>
-      <textarea id="comment" name="comment"></textarea><br>
-      <input type="submit" value="Submit">
-    </form>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guestbook</title>
+  <script>
+    function saveComment() {
+      var name = document.getElementById("name").value.trim();
+      var comment = document.getElementById("comment").value.trim();
+
+      if (name === "" || comment === "") {
+        alert("Please fill in all fields.");
+        return;
+      }
+
+      var guestbookEntry = {
+        name: name,
+        comment: comment,
+        date: new Date().toLocaleString()
+      };
+
+      var guestbookEntries = localStorage.getItem("guestbookEntries");
+      if (guestbookEntries) {
+        guestbookEntries = JSON.parse(guestbookEntries);
+      } else {
+        guestbookEntries = [];
+      }
+
+      guestbookEntries.push(guestbookEntry);
+      localStorage.setItem("guestbookEntries", JSON.stringify(guestbookEntries));
+
+      // Display the new entry immediately
+      displayEntries();
+      
+      // Clear the form for the next entry
+      document.getElementById("name").value = "";
+      document.getElementById("comment").value = "";
+    }
+
+    function displayEntries() {
+      var guestbookEntries = localStorage.getItem("guestbookEntries");
+      if (guestbookEntries) {
+        guestbookEntries = JSON.parse(guestbookEntries);
+      } else {
+        guestbookEntries = [];
+      }
+
+      var guestbookList = document.getElementById("guestbookList");
+      guestbookList.innerHTML = "";
+
+      guestbookEntries.forEach(function(entry) {
+        var listItem = document.createElement("li");
+        listItem.textContent = entry.name + " (" + entry.date + "): " + entry.comment;
+        guestbookList.appendChild(listItem);
+      });
+    }
+
+    // Display existing entries when the page loads
+    window.onload = displayEntries;
+  </script>
+</head>
+<body>
+  <h1>Welcome to the Guestbook</h1>
+  <form onsubmit="event.preventDefault(); saveComment()">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name"><br>
+    <label for="comment">Comment:</label><br>
+    <textarea id="comment" name="comment"></textarea><br>
+    <input type="submit" value="Submit">
+  </form>
+  <ul id="guestbookList"></ul>
+</body>
+</html>
+
+    
   </div>
 </body>
 </html>
