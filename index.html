@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to My Website</title>
+    <title>Darien Entwistle`s Personal Site</title>
     <style>
         body {
             background-image: url('https://hips.hearstapps.com/hmg-prod/images/michael-schumacher-of-germany-racing-for-ferrari-during-the-news-photo-1646420952.jpg');
@@ -11,17 +11,22 @@
             background-position: center;
             color: #fff;
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
         nav {
             background-color: #ff0000; /* Red color for navigation bar */
             color: #fff;
             text-align: center;
             padding: 10px 0;
+            display: flex;
+            justify-content: center;
         }
         nav a {
             color: #fff;
             text-decoration: none;
             padding: 10px 20px;
+            margin: 0 10px;
         }
         nav a:hover {
             background-color: #555;
@@ -30,6 +35,68 @@
             max-width: 960px;
             margin: 20px auto;
             padding: 0 20px;
+            text-align: center;
+        }
+        .welcome-section {
+            padding: 50px 0;
+        }
+        .welcome-text {
+            font-size: 1.5em;
+            line-height: 1.5;
+            background-color: rgba(255, 0, 0, 0.881); /* Semi-transparent white background */
+            border-radius: 20px; /* Oval shape */
+            padding: 20px; /* Padding inside the oval container */
+        }
+        .btn-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #ff6666;
+            color: #fff;
+            text-decoration: none;
+            padding: 15px 20px;
+            border-radius: 5px;
+            margin: 10px;
+            transition: background-color 0.3s ease;
+            max-width: 250px;
+        }
+        .btn:hover {
+            background-color: #cc0000;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            z-index: 1000;
+        }
+        .popup p {
+            margin-bottom: 10px;
+        }
+        .popup-btn {
+            background-color: #ff6666;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+            display: inline-block;
+        }
+        .popup-btn:hover {
+            background-color: #cc0000;
+        }
+        .btn img {
+            max-width: 100px;
+            height: auto;
         }
     </style>
 </head>
@@ -39,14 +106,43 @@
         <a href="about.html">About Me</a>
         <a href="services.html">Services & Products</a>
         <a href="projects.html">Projects</a>
+        <a href="https://ai.djdarien.life/">Ai ChatGPT</a>
         <a href="socialmedia.html">Social Media</a>
-        <a href="guestbook.html">guestbook</a>
+        <a href="guestbook.html">Guestbook</a>
     </nav>
     <div class="container">
-        <h1>Welcome</h1>
-        <p>What's this site all about?</p>
-        <p>To show off, to allow me to share with others, and enjoy all of my various projects: some are old programming projects of fun attempts, others using Raspberry Pis, home servers, from arcade cabinets, to vintage Apple Macintoshes, and more!</p>
-        <p>Enjoy exploring!</p>
+        <div class="welcome-section">
+            <h1>Welcome!</h1>
+            <div class="welcome-text">
+                <p>What is this all about?</p>
+                <p>First off , let me say thank you for visiting and second off welcome to my site! 
+                    <p> This site was designed by me to show off, to allow me to share with others, and enjoy all of my various projects.
+                        <p>Some are old programming projects of fun attempts, others using Raspberry Pis, home servers, from arcade cabinets, to vintage Apple Macintoshes, and even a private AI chat ollama ChatGPT bot and much more!</p>
+                <p>Enjoy , now go exploring!</p>
+            </div>
+            <div class="btn-container">
+                <a href="about.html" class="btn"><img src="about_me.jpeg" alt="All about me!" width="100" height="100"> About Me </a>
+                <a href="projects.html" class="btn"><img src="https://i0.wp.com/netlogx.com/wp-content/uploads/2019/09/Programs-Projects-and-Portfolios-Whats-the-Difference_FeaturedImage.jpg" alt="My project list page" width="100" height="100"> Projects</a>
+                <a href="https://ai.djdarien.life/" class="btn"><img src="https://ociotec.com/wp-content/uploads/2024/01/ollama.png" alt="Private ChatGPT" width="100" height="100"> Private ChatGPT bot</a>
+                <a href="socialmedia.html" class="btn"><img src="https://www.moxeemarketing.com/wp-content/uploads/2022/12/Logos-for-a-wide-range-of-social-media-platforms.jpg" alt="Social Media page " width="100" height="100"> Social Media </a>
+            </div>
+        </div>
+        <div class="popup" id="popup">
+            <p>We use cookies on our website to improve functionality and performance. By continuing to browse the site, you are agreeing to our use of cookies. For more information, please see our <a href="#">Privacy Policy</a>.</p>
+            <a href="#" class="popup-btn" onclick="closePopup()">Close</a>
+        </div>
     </div>
+
+    <script>
+        // Display popup on page load
+        window.onload = function() {
+            document.getElementById('popup').style.display = 'block';
+        };
+
+        // Close popup
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
 </body>
 </html>
