@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Downloads</title>
+  <style>
+    body {
+      background-image: url('https://hips.hearstapps.com/hmg-prod/images/michael-schumacher-of-germany-racing-for-ferrari-during-the-news-photo-1646420952.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+    nav {
+      background-color: #ff0000;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+    }
+    nav a:hover {
+      background-color: #555;
+    }
+    .container {
+      max-width: 960px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    .downloads {
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .filter {
+      margin-bottom: 20px;
+    }
+    .filter label, .filter select {
+      margin-right: 10px;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    .download-link {
+      color: #ff0000;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="projects.html">Projects</a>
+    <a href="socialmedia.html">Social Media</a>
+    <a href="guestbook.html">Guestbook</a>
+    <a href="downloads.html">Downloads</a>
+  </nav>
+  <div class="container">
+    <h1>Downloads</h1>
+    <div class="downloads">
+      <div class="filter">
+        <label for="category">Category:</label>
+        <select id="category" onchange="filterDownloads()">
+          <option value="">All</option>
+          <option value="script">Scripts</option>
+          <option value="game">Games</option>
+          <option value="theme-pack">Theme Packs</option>
+        </select>
+        <label for="sort">Sort By:</label>
+        <select id="sort" onchange="sortDownloads()">
+          <option value="date">Date</option>
+          <option value="file-type">File Type</option>
+        </select>
+      </div>
+      <ul id="downloadsList">
+        <!-- Downloads will be appended here by JavaScript -->
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    const downloads = [
+      {
+        name: 'Pop Apps Installer',
+        path: '/popapps_installer.sh',
+        description: 'Used for installing a bulk amount of POP OS apps for a new install.',
+        category: 'script',
+        fileType: 'sh',
+        date: '2022-06-01'
+      },
+      {
+        name: 'UE Installer',
+        path: '/files/ue_installer.sh',
+        description: 'Used for installing Unreal engine on Debian-based distros.',
+        category: 'script',
+        fileType: 'sh',
+        date: '2022-02-15'
+      },
+      {
+        name: 'Adventures of Ollie The Ball: The Lost Coin Hunt',
+        path: 'https://s3.amazonaws.com/netbytegames/ollietheball/Adventures+of+Ollie+The+Ball-The+Lost+Coin+Hunt(Alpha053).msi',
+        description: 'Our game "Adventures of Ollie The Ball: The Lost Coin Hunt" was inspired by Rolie Polie Olie.',
+        category: 'game',
+        fileType: 'msi',
+        date: '2021-12-20'
+      },
+      {
+        name: 'Windows Legacy Theme Pack',
+        path: 'https://github.com/djdarien/mycustomwindows10themes/releases/download/1.0/Windows.Legacy.deskthemepack',
+        description: '',
+        category: 'theme-pack',
+        fileType: 'deskthemepack',
+        date: '2021-05-25'
+      },
+      {
+        name: 'Jurassic Park Theme Pack',
+        path: 'https://github.com/djdarien/mycustomwindows10themes/releases/download/1/JurassicPark-Ingen.zip',
+        description: '',
+        category: 'theme-pack',
+        fileType: 'zip',
+        date: '2021-08-10'
+      }
+    ];
+
+    function filterDownloads() {
+      const selectedCategory = document.getElementById('category').value;
+      displayDownloads(selectedCategory, document.getElementById('sort').value);
+    }
+
+    function sortDownloads() {
+      displayDownloads(document.getElementById('category').value, document.getElementById('sort').value);
+    }
+
+    function displayDownloads(category = '', sortBy = 'date') {
+      let filteredDownloads = downloads;
+      if (category) {
+        filteredDownloads = filteredDownloads.filter(download => download.category === category);
+      }
+
+      if (sortBy === 'file-type') {
+        filteredDownloads.sort((a, b) => a.fileType.localeCompare(b.fileType));
+      } else {
+        filteredDownloads.sort((a, b) => new Date(b.date) - new Date(a.date));
+      }
+
+      const downloadsList = document.getElementById('downloadsList');
+      downloadsList.innerHTML = '';
+
+      filteredDownloads.forEach(download => {
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `<strong>${download.name}</strong><br>
+          <a class="download-link" href="${download.path}" target="_blank">${download.path.split('/').pop()}</a>
+          <br>${download.description}<br>
+          <small>Type: ${download.fileType.toUpperCase()}, Date: ${download.date}</small>`;
+        downloadsList.appendChild(listItem);
+      });
+    }
+
+    // Initialize display
+    window.onload = () => {
+      displayDownloads();
+    }
+  </script>
+</body>
+</html>
