@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dariens Tech Store</title>
+  <style>
+    body {
+      background-image: url('https://hips.hearstapps.com/hmg-prod/images/michael-schumacher-of-germany-racing-for-ferrari-during-the-news-photo-1646420952.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+    nav {
+      background-color: #ff0000; /* Red color for navigation bar */
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+    }
+    nav a:hover {
+      background-color: #555;
+    }
+    .container {
+      max-width: 960px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+    .social-links {
+      list-style-type: none;
+      padding: 0;
+    }
+    .social-links li {
+      margin-bottom: 10px;
+    }
+    .social-links li a {
+      display: inline-block;
+      background-color: #fff;
+      color: #ff0000;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+    .social-links li a:hover {
+      background-color: #ddd;
+    }
+    /* Additional styles for store page */
+    .store-header {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .filters {
+      margin: 20px 0;
+      text-align: center;
+    }
+    .filters select {
+      padding: 10px;
+      margin: 0 10px;
+      border-radius: 5px;
+      border: none;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .product-card {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .product-card img {
+      max-width: 100%;
+      border-radius: 5px;
+    }
+    .product-card h3 {
+      margin: 10px 0 5px;
+    }
+    .product-card p {
+      margin: 5px 0;
+    }
+    .product-card button {
+      background-color: #ff6666;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .product-card button:hover {
+      background-color: #cc0000;
+    }
+    .cart {
+      margin-top: 30px;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 15px;
+      border-radius: 10px;
+    }
+    .cart table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .cart table, .cart th, .cart td {
+      border: 1px solid #fff;
+    }
+    .cart th, .cart td {
+      padding: 10px;
+      text-align: center;
+    }
+    .checkout-btn {
+      background-color: #ff6666;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 15px;
+    }
+    .checkout-btn:hover {
+      background-color: #cc0000;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="services.html">Services & Products</a>
+    <a href="projects.html">Projects</a>
+    <a href="https://ai.djdarien.life/">Ai ChatGPT</a>
+    <a href="socialmedia.html">Social Media</a>
+    <a href="guestbook.html">Guestbook</a>
+    <a href="store.html">Store</a>
+  </nav>
+  <div class="container">
+    <header class="store-header">
+      <h1>Dariens Tech Store</h1>
+      <p>Buy used games and tech equipment.</p>
+    </header>
+    <div class="filters">
+      <label for="category-filter">Category:</label>
+      <select id="category-filter" onchange="filterProducts()">
+        <option value="All">All</option>
+        <option value="Video Games">Video Games</option>
+        <option value="Game Consoles">Game Consoles</option>
+        <option value="Vintage Computers">Vintage Computers</option>
+        <option value="Laptops">Laptops</option>
+        <option value="Computers">Computers</option>
+        <option value="Misc Technology">Misc Technology</option>
+      </select>
+      <span id="subcat-filter-container" style="display:none;">
+        <label for="subcat-filter">Subcategory:</label>
+        <select id="subcat-filter" onchange="filterProducts()">
+          <option value="All">All</option>
+          <option value="Xbox">Xbox</option>
+          <option value="Playstation 2">Playstation 2</option>
+          <option value="WII">WII</option>
+          <option value="Xbox 360">Xbox 360</option>
+          <option value="Nintendo 64">Nintendo 64</option>
+          <option value="Playstation 4">Playstation 4</option>
+        </select>
+      </span>
+    </div>
+    <div class="product-grid" id="product-grid">
+      <!-- Product cards will be injected here -->
+    </div>
+    <div class="cart" id="cart">
+      <h2>Your Cart</h2>
+      <table id="cart-table">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Qty</th>
+            <th>Total</th>
+            <th>Remove</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Cart items will be injected here -->
+        </tbody>
+      </table>
+      <h3 id="cart-total">Total: $0</h3>
+      <button class="checkout-btn" onclick="checkout()">Checkout with PayPal</button>
+    </div>
+  </div>
+  <script>
+    // Dummy product data
+    const products = [
+      { id: 1, name: "The Legend of Zelda", price: 15, category: "Video Games", subcategory: "", image: "https://via.placeholder.com/150?text=Zelda" },
+      { id: 2, name: "Xbox One Console", price: 150, category: "Game Consoles", subcategory: "Xbox", image: "https://via.placeholder.com/150?text=Xbox+One" },
+      { id: 3, name: "Playstation 2 Console", price: 80, category: "Game Consoles", subcategory: "Playstation 2", image: "https://via.placeholder.com/150?text=PS2" },
+      { id: 4, name: "Commodore 64", price: 200, category: "Vintage Computers", subcategory: "", image: "https://via.placeholder.com/150?text=Commodore+64" },
+      { id: 5, name: "Dell Inspiron Laptop", price: 300, category: "Laptops", subcategory: "", image: "https://via.placeholder.com/150?text=Dell+Laptop" },
+      { id: 6, name: "HP Pavilion Desktop", price: 250, category: "Computers", subcategory: "", image: "https://via.placeholder.com/150?text=HP+Desktop" },
+      { id: 7, name: "USB Keyboard", price: 20, category: "Misc Technology", subcategory: "", image: "https://via.placeholder.com/150?text=Keyboard" },
+      { id: 8, name: "Wii Console", price: 90, category: "Game Consoles", subcategory: "WII", image: "https://via.placeholder.com/150?text=Wii" },
+      { id: 9, name: "Xbox 360 Console", price: 120, category: "Game Consoles", subcategory: "Xbox 360", image: "https://via.placeholder.com/150?text=Xbox+360" },
+      { id: 10, name: "Nintendo 64 Console", price: 100, category: "Game Consoles", subcategory: "Nintendo 64", image: "https://via.placeholder.com/150?text=N64" },
+      { id: 11, name: "Playstation 4 Console", price: 200, category: "Game Consoles", subcategory: "Playstation 4", image: "https://via.placeholder.com/150?text=PS4" }
+    ];
+
+    let filteredProducts = products;
+    let cart = [];
+
+    // Display products in grid
+    function displayProducts() {
+      const productGrid = document.getElementById("product-grid");
+      productGrid.innerHTML = "";
+      filteredProducts.forEach(product => {
+        const productCard = document.createElement("div");
+        productCard.className = "product-card";
+        productCard.innerHTML = `
+          <img src="${product.image}" alt="${product.name}">
+          <h3>${product.name}</h3>
+          <p>$${product.price}</p>
+          <button onclick="addToCart(${product.id})">Add to Cart</button>
+        `;
+        productGrid.appendChild(productCard);
+      });
+    }
+
+    // Filter products by category and subcategory
+    function filterProducts() {
+      const categoryFilter = document.getElementById("category-filter").value;
+      const subcatFilter = document.getElementById("subcat-filter") ? document.getElementById("subcat-filter").value : "All";
+      if (categoryFilter === "Game Consoles") {
+        document.getElementById("subcat-filter-container").style.display = "inline";
+      } else {
+        document.getElementById("subcat-filter-container").style.display = "none";
+      }
+      filteredProducts = products.filter(product => {
+        const catMatch = (categoryFilter === "All" || product.category === categoryFilter);
+        let subcatMatch = true;
+        if (categoryFilter === "Game Consoles" && subcatFilter !== "All") {
+          subcatMatch = (product.subcategory === subcatFilter);
+        }
+        return catMatch && subcatMatch;
+      });
+      displayProducts();
+    }
+
+    // Add product to cart
+    function addToCart(productId) {
+      const product = products.find(p => p.id === productId);
+      const cartItem = cart.find(item => item.product.id === productId);
+      if (cartItem) {
+        cartItem.quantity += 1;
+      } else {
+        cart.push({ product, quantity: 1 });
+      }
+      updateCart();
+    }
+
+    // Update cart display
+    function updateCart() {
+      const cartTableBody = document.querySelector("#cart-table tbody");
+      cartTableBody.innerHTML = "";
+      let total = 0;
+      cart.forEach((item, index) => {
+        const itemTotal = item.product.price * item.quantity;
+        total += itemTotal;
+        const row = document.createElement("tr");
+        row.innerHTML = `
+          <td>${item.product.name}</td>
+          <td>$${item.product.price}</td>
+          <td>${item.quantity}</td>
+          <td>$${itemTotal}</td>
+          <td><button onclick="removeFromCart(${index})">Remove</button></td>
+        `;
+        cartTableBody.appendChild(row);
+      });
+      document.getElementById("cart-total").innerText = `Total: $${total}`;
+    }
+
+    // Remove product from cart
+    function removeFromCart(index) {
+      cart.splice(index, 1);
+      updateCart();
+    }
+
+    // Checkout - redirect to PayPal link
+    function checkout() {
+      window.location.href = "https://paypal.me/djdarien";
+    }
+
+    // Initial display of products
+    displayProducts();
+  </script>
+</body>
+</html>

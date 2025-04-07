@@ -6,7 +6,7 @@
     <title>Darien Entwistle`s Personal Site</title>
     <style>
         body {
-            background-image: url('https://hips.hearstapps.com/hmg-prod/images/michael-schumacher-of-germany-racing-for-ferrari-during-the-news-photo-1646420952.jpg');
+            background-image: url('sebring-dex.JPEG');
             background-size: cover;
             background-position: center;
             color: #fff;
@@ -15,7 +15,7 @@
             padding: 0;
         }
         nav {
-            background-color: #ff0000; /* Red color for navigation bar */
+            background-color: #ff0000;
             color: #fff;
             text-align: center;
             padding: 10px 0;
@@ -43,9 +43,9 @@
         .welcome-text {
             font-size: 1.5em;
             line-height: 1.5;
-            background-color: rgba(255, 0, 0, 0.881); /* Semi-transparent white background */
-            border-radius: 20px; /* Oval shape */
-            padding: 20px; /* Padding inside the oval container */
+            background-color: rgba(255, 0, 0, 0.881);
+            border-radius: 20px;
+            padding: 20px;
         }
         .btn-container {
             display: flex;
@@ -106,20 +106,22 @@
         <a href="about.html">About Me</a>
         <a href="services.html">Services & Products</a>
         <a href="projects.html">Projects</a>
+        <a href="music.html">My Music </a>
         <a href="downloads.html">Downloads</a>
         <a href="https://ai.djdarien.life/">AI ChatGPT</a>
         <a href="socialmedia.html">Social Media</a>
-        <a href="guestbook.html">Guestbook</a>
+        
     </nav>
     <div class="container">
         <div class="welcome-section">
             <h1>Welcome!</h1>
             <div class="welcome-text">
+                <div id="visitor-info" style="margin-bottom: 20px; font-weight: bold;"></div>
                 <p>What is this all about?</p>
-                <p>First off , let me say thank you for visiting and second off welcome to my site! 
-                    <p> This site was designed by me to show off, to allow me to share with others, and enjoy all of my various projects.
-                        <p>Some are old programming projects of fun attempts, others using Raspberry Pis, home servers, from arcade cabinets, to vintage Apple Macintoshes, and even a private AI chat ollama ChatGPT bot and much more!</p>
-                <p>Enjoy , now go exploring!</p>
+                <p>First off, let me say thank you for visiting and second off welcome to my site!</p>
+                <p>This site was designed by me to show off, to allow me to share with others, and enjoy all of my various projects.</p>
+                <p>Some are old programming projects of fun attempts, others using Raspberry Pis, home servers, from arcade cabinets, to vintage Apple Macintoshes, and even a private AI chat ollama ChatGPT bot and much more!</p>
+                <p>Enjoy, now go exploring!</p>
             </div>
             <div class="btn-container">
                 <a href="about.html" class="btn"><img src="about_me.jpeg" alt="All about me!" width="100" height="100"> About Me </a>
@@ -128,22 +130,21 @@
                 <a href="socialmedia.html" class="btn"><img src="https://www.moxeemarketing.com/wp-content/uploads/2022/12/Logos-for-a-wide-range-of-social-media-platforms.jpg" alt="Social Media page " width="100" height="100"> Social Media </a>
             </div>
         </div>
-        <div class="popup" id="popup">
-            <p>We use cookies on our website to improve functionality and performance. By continuing to browse the site, you are agreeing to our use of cookies. For more information, please see our <a href="#">Privacy Policy</a>.</p>
-            <a href="#" class="popup-btn" onclick="closePopup()">Close</a>
-        </div>
     </div>
 
     <script>
-        // Display popup on page load
-        window.onload = function() {
-            document.getElementById('popup').style.display = 'block';
-        };
-
-        // Close popup
-        function closePopup() {
-            document.getElementById('popup').style.display = 'none';
-        }
+        // Fetch and display visitor IP and country
+        fetch('https://ipwho.is/')
+            .then(response => response.json())
+            .then(data => {
+                const ip = data.ip;
+                const country = data.country;
+                const infoDiv = document.getElementById('visitor-info');
+                infoDiv.innerHTML = `You are visiting from <span style="color: yellow;">${ip}</span> (${country})`;
+            })
+            .catch(error => {
+                console.error('Error fetching IP info:', error);
+            });
     </script>
 </body>
 </html>
